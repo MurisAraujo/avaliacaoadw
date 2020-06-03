@@ -10,8 +10,8 @@ import org.springframework.data.repository.CrudRepository;
 
 /**
  *
- * @author Beto
+ * @author Murilo
  */
-public interface ProdutoRepository extends CrudRepository<User ,String>{
+public interface UserRepository extends CrudRepository<User ,String>{
     User findById(long id);
 }

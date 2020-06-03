@@ -15,18 +15,17 @@ import org.hibernate.validator.constraints.NotEmpty;
  *
  * @author Murilo
  */
-
 @Entity
-public class User implements Serializable{
-    
+public class User implements Serializable {
+
     @Id
     @GeneratedValue
-    private long id;    
-
-    private String nome;
-    private String senha;    
-    private String dataCadastro;
-    private String status;
+    private long id;
+    public String userName;
+    public String nome;
+    public String senha;
+    public String dataCadastro;
+    public String status;
 
     public long getId() {
         return id;
@@ -34,6 +33,14 @@ public class User implements Serializable{
 
     public void setId(long id) {
         this.id = id;
+    }
+
+    public String getUserName() {
+        return userName;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
     }
 
     public String getNome() {
@@ -46,7 +53,7 @@ public class User implements Serializable{
 
     public void setSenha(String senha) {
         this.senha = senha;
-    }    
+    }
 
     public String getStatus() {
         return status;
@@ -54,7 +61,7 @@ public class User implements Serializable{
 
     public void setStatus(String status) {
         this.status = status;
-    }    
+    }
 
     public void setNome(String nome) {
         this.nome = nome;
@@ -66,6 +73,6 @@ public class User implements Serializable{
 
     public void setDataCadastro(String dataCadastro) {
         this.dataCadastro = dataCadastro;
-    }   
-    
+    }
+
 }
